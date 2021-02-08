@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity(), MainView {
         Log.i("RestAPI View", "getResponseData: "+Gson().toJson(drsResponse))
     }
 
-    override fun setResponseError(error: String) {
-        Toast.makeText(this, error, Toast.LENGTH_SHORT).show()
+    override fun setResponseError(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
 

@@ -1,11 +1,12 @@
 package com.vamosys.drs.model.api
 
 import com.google.gson.GsonBuilder
+import com.vamosys.drs.view.util.Constants
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RestApiManager {
-    var BASE_URL: String = "http://209.97.163.4:9910/v2/"
+    var BASE_URL: String = Constants.Base_Url
 
     fun getRestApi(): Retrofit? {
         var retrofit: Retrofit? = null

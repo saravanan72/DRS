@@ -1,6 +1,7 @@
 package com.vamosys.drs.controller
 
 import com.vamosys.drs.model.DataAccessLayer
+import com.vamosys.drs.model.data.DrsResponse
 import com.vamosys.drs.view.callbacks.MainView
 
 class MainController(private var model: DataAccessLayer) {
@@ -11,8 +12,14 @@ class MainController(private var model: DataAccessLayer) {
     }
 
     fun onStatusRequestCall() {
-        model.getStatusResponse(mView)
-       // Log.i("RestAPI Controller", "onStatusRequestCall: "+model.getStatusResponse())
-        //mView.setStatusResponse(model.getStatusResponse()!!)
+        model.getStatusResponse(this)
+    }
+
+    fun setApiResponse(response: DrsResponse) {
+        mView.setStatusResponse(response)
+    }
+
+    fun setResponseError(message: String) {
+        mView.setResponseError(message)
     }
 }
