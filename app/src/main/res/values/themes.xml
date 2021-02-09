@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.DRS" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.DRS" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -13,4 +13,72 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="AppTheme.AppBarOverlay" parent="Theme.MaterialComponents.DayNight.DarkActionBar" >
+        <item name="android:fontFamily">@font/oppins_semi_bold</item>
+    </style>
+    <style name="semibold_black_textview_theme">
+        <item name="fontFamily">@font/oppins_semi_bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="semibold_white_textview_theme">
+        <item name="fontFamily">@font/oppins_semi_bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="semibold_green_textview_theme">
+        <item name="fontFamily">@font/oppins_semi_bold</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+    <style name="semibold_red_textview_theme">
+        <item name="fontFamily">@font/oppins_semi_bold</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+    <style name="semibold_blue_textview_theme">
+        <item name="fontFamily">@font/oppins_semi_bold</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+    <style name="regular_black_textview_theme">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="regular_white_textview_theme">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="regular_green_textview_theme">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+    <style name="regular_red_textview_theme">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+    <style name="regular_blue_textview_theme">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="medium_white_textview_theme">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="medium_gray_textview_theme">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="medium_light_gray_textview_theme">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/semi_gray</item>
+    </style>
+    <style name="medium_dark_red_textview_theme">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/dark_red</item>
+    </style>
+    <style name="light_black_textview_theme">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <color name="dark_red">#C4041D</color>
 </resources>

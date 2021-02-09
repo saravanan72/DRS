@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="@dimen/dp_10"
+    android:layout_marginEnd="@dimen/dp_10"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="@dimen/dp_3"
+    app:cardCornerRadius="@dimen/dp_10"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_8"
+        >
+
+        <RelativeLayout
+            android:id="@+id/status_item_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00CD38"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingStart="@dimen/dp_16"
+            >
+            <TextView
+                android:id="@+id/status_item_status_txtvw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/dp_40"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:text="Status: Loaded"
+                android:paddingStart="@dimen/dp_16"
+                android:theme="@style/medium_white_textview_theme"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/status_item_type_txtvw"
+                />
+
+            <TextView
+                android:id="@+id/status_item_type_txtvw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/dp_40"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:layout_alignParentEnd="true"
+                android:paddingEnd="16dp"
+                android:theme="@style/medium_white_textview_theme"
+                android:text="Mar 17, 03:30 pm"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/status_item_truck_way_imgvw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_subtraction_curve"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_title_layout"
+            />
+
+        <ImageView
+            android:id="@+id/status_item_truck_imgvw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_big_truck"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_title_layout"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_24"
+            />
+
+        <TextView
+            android:id="@+id/status_item_vehicle_number_txtvw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_5"
+            android:theme="@style/semibold_black_textview_theme"
+            android:text="TN31 4545"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_title_layout"
+            app:layout_constraintEnd_toStartOf="@+id/status_item_truck_way_imgvw"
+            android:paddingStart="@dimen/dp_16"
+            />
+
+
+
+        <TextView
+            android:id="@+id/status_item_vehicle_location_txtvw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/dp_16"
+            android:theme="@style/medium_light_gray_textview_theme"
+            android:text="Chennai"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_number_txtvw"
+            app:layout_constraintEnd_toStartOf="@+id/status_item_truck_way_imgvw"
+            android:paddingStart="@dimen/dp_16"
+            />
+        <TextView
+            android:id="@+id/status_item_vehicle_start_since_txtvw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/dp_16"
+            android:theme="@style/medium_dark_red_textview_theme"
+            android:text="Moving Since 12 hours"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_location_txtvw"
+            app:layout_constraintEnd_toStartOf="@+id/status_item_truck_way_imgvw"
+            android:paddingStart="@dimen/dp_16"
+            />
+        <TextView
+            android:id="@+id/status_item_vehicle_driver_name_txtvw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_25"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/dp_16"
+            android:theme="@style/semibold_black_textview_theme"
+            android:drawableStart="@drawable/ic_user_profile"
+            android:drawablePadding="5dp"
+            android:text="JOHN BRIGHT"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_start_since_txtvw"
+            app:layout_constraintEnd_toStartOf="@+id/status_item_truck_way_imgvw"
+            android:paddingStart="@dimen/dp_16"
+            />
+
+        <View
+            android:id="@+id/status_item_vehicle_driver_name_vertical_rule"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_driver_name_txtvw"
+            app:layout_constraintEnd_toStartOf="@+id/status_item_truck_imgvw"
+            />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+
+        <ImageView
+            android:id="@+id/status_item_truck_loaded_loc_imgvw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:src="@drawable/ic_hub_main"
+            android:layout_marginStart="@dimen/dp_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_driver_name_vertical_rule"
+            />
+
+        <TextView
+            android:id="@+id/status_item_vehicle_loaded_loc_quote_txtvw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/dp_16"
+            android:theme="@style/light_black_textview_theme"
+            android:text="Loaded From Location"
+            android:textSize="@dimen/sp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            app:layout_constraintStart_toEndOf="@+id/status_item_truck_loaded_loc_imgvw"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_driver_name_vertical_rule"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:paddingStart="@dimen/dp_5"
+            />
+
+        <TextView
+            android:id="@+id/status_item_vehicle_loaded_loc_txtvw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/dp_16"
+            android:theme="@style/medium_dark_red_textview_theme"
+            android:text="Oragadam"
+            app:layout_constraintStart_toEndOf="@+id/status_item_truck_loaded_loc_imgvw"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_loaded_loc_quote_txtvw"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:paddingStart="@dimen/dp_5"
+            />
+        <TextView
+            android:id="@+id/status_item_vehicle_load_complt_time_quote_txtvw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/dp_16"
+            android:theme="@style/light_black_textview_theme"
+            android:text="Loading completed time"
+            android:textSize="@dimen/sp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            app:layout_constraintStart_toEndOf="@+id/status_item_truck_loaded_loc_imgvw"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_loaded_loc_txtvw"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:paddingStart="@dimen/dp_5"
+            />
+
+        <TextView
+            android:id="@+id/status_item_vehicle_load_complt_time_txtvw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/dp_16"
+            android:theme="@style/medium_dark_red_textview_theme"
+            android:text="Mar 17 10:00 am"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintStart_toEndOf="@+id/status_item_truck_loaded_loc_imgvw"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_load_complt_time_quote_txtvw"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:paddingStart="@dimen/dp_5"
+            />
+
+        <ImageView
+            android:id="@+id/status_item_truck_unload_loc_imgvw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:src="@drawable/ic_hub_main"
+            app:layout_constraintStart_toEndOf="@+id/guideline_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_driver_name_vertical_rule"
+            />
+
+        <TextView
+            android:id="@+id/status_item_vehicle_unload_loc_quote_txtvw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/dp_16"
+            android:theme="@style/light_black_textview_theme"
+            android:text="Unloading Location"
+            android:textSize="@dimen/sp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            app:layout_goneMarginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@+id/status_item_truck_unload_loc_imgvw"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_driver_name_vertical_rule"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:paddingStart="@dimen/dp_5"
+            />
+
+        <TextView
+            android:id="@+id/status_item_vehicle_unload_loc_txtvw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/dp_16"
+            android:theme="@style/medium_dark_red_textview_theme"
+            android:text="Hosur"
+            app:layout_goneMarginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@+id/status_item_truck_unload_loc_imgvw"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_unload_loc_quote_txtvw"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:paddingStart="@dimen/dp_5"
+            />
+
+
+        <TextView
+            android:id="@+id/status_item_vehicle_eat_dest_quote_txtvw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/dp_16"
+            android:theme="@style/light_black_textview_theme"
+            android:text="ETA To Destination"
+            android:textSize="@dimen/sp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            app:layout_goneMarginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@+id/status_item_truck_unload_loc_imgvw"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_unload_loc_txtvw"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:paddingStart="@dimen/dp_5"
+            />
+
+        <TextView
+            android:id="@+id/status_item_vehicle_eat_dest_txtvw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/dp_16"
+            android:theme="@style/light_black_textview_theme"
+            android:text="Mar 17 10:00 am"
+            android:textSize="@dimen/sp_12"
+            app:layout_goneMarginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@+id/status_item_truck_unload_loc_imgvw"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_eat_dest_quote_txtvw"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:paddingStart="@dimen/dp_5"
+            />
+
+        <View
+            android:id="@+id/status_item_vehicle_load_loc_vertical_rule"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_load_complt_time_txtvw"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <HorizontalScrollView
+            android:id="@+id/status_item_feul_level_scrolllayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_load_loc_vertical_rule"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:theme="@style/regular_black_textview_theme"
+            android:scrollbars="none"
+            android:scrollbarSize="@dimen/dp_0"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_8"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/status_item_feul_level_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dp_60"
+                    android:background="@drawable/shape_rounded_rect_gray"
+                    android:layout_marginTop="8dp"
+                    android:padding="@dimen/dp_8"
+                    >
+                    <ImageView
+                        android:id="@+id/status_item_feul_imgvw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_fuel_gauge"
+                        android:minHeight="@dimen/dp_25"
+                        android:minWidth="25dp"
+                        android:scaleType="fitXY"
+                        android:layout_centerVertical="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/status_item_feul_level_txtvw"
+                        android:layout_toEndOf="@+id/status_item_feul_imgvw"
+                        android:text="50L"
+                        android:theme="@style/semibold_black_textview_theme"
+                        android:textSize="@dimen/sp_12"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/status_item_feul_update_loc_txtvw"
+                        android:layout_toEndOf="@+id/status_item_feul_imgvw"
+                        android:layout_below="@+id/status_item_feul_level_txtvw"
+                        android:text="Koyambedu"
+                        android:theme="@style/regular_black_textview_theme"
+                        android:textSize="@dimen/sp_12"
+                        />
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dp_60"
+                    android:id="@+id/status_item_truck_distance_completed_txtvw"
+                    app:layout_constraintStart_toEndOf="@+id/status_item_feul_level_scrolllayout"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:padding="@dimen/dp_8"
+                    android:gravity="center"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:background="@drawable/shape_rounded_rect_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_load_loc_vertical_rule"
+                    android:drawableStart="@drawable/ic_dashboard_fuel_gauge_meter"
+                    android:text="1000.15"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dp_60"
+                    android:minWidth="@dimen/dp_60"
+                    android:id="@+id/status_item_truck_feul_filled_txtvw"
+                    app:layout_constraintStart_toEndOf="@+id/status_item_truck_distance_completed_txtvw"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:padding="@dimen/dp_8"
+                    android:gravity="center"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:background="@drawable/shape_rounded_rect_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_load_loc_vertical_rule"
+                    android:drawableStart="@drawable/ic_document_rolled"
+                    android:theme="@style/regular_black_textview_theme"
+                    android:text="2"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dp_60"
+                    android:id="@+id/status_item_truck_feul_checklist_txtvw"
+                    app:layout_constraintStart_toEndOf="@+id/status_item_truck_feul_filled_txtvw"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:padding="@dimen/dp_8"
+                    android:gravity="center"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:theme="@style/regular_black_textview_theme"
+                    android:background="@drawable/shape_rounded_rect_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/status_item_vehicle_load_loc_vertical_rule"
+                    android:drawableStart="@drawable/ic_ordered_list"
+                    android:text="Checklist"
+                    />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/status_item_truck_distance_crossed_txtvw"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:padding="@dimen/dp_8"
+            android:gravity="center"
+            android:theme="@style/medium_dark_red_textview_theme"
+            android:drawablePadding="@dimen/dp_5"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_feul_level_scrolllayout"
+            android:drawableStart="@drawable/ic_info_large"
+            android:text="300 kms crossed out 500 kms"
+            />
+
+
+        <View
+            android:id="@+id/status_item_truck_distance_crossed_horizondal_rule"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/gray"
+            android:layout_marginTop="@dimen/dp_8"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_truck_distance_crossed_txtvw"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_40"
+            android:gravity="center"
+            android:id="@+id/status_item_truck_driver_contact_txtvw"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_left"
+            android:layout_marginTop="@dimen/dp_8"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_truck_distance_crossed_horizondal_rule"
+            android:drawableStart="@drawable/ic_baseline_call_24"
+            android:text="Call"
+            android:drawablePadding="@dimen/dp_5"
+            android:theme="@style/semibold_black_textview_theme"
+            />
+        <View
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="@dimen/dp_35"
+            android:background="@color/gray"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_left"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_truck_distance_crossed_horizondal_rule"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_40"
+            android:gravity="center"
+            android:id="@+id/status_item_truck_info_alert_txtvw"
+            app:layout_constraintStart_toEndOf="@+id/guideline_vertical_left"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_right"
+            android:layout_marginTop="@dimen/dp_8"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_truck_distance_crossed_horizondal_rule"
+            android:drawableStart="@drawable/ic_info_outline_circle"
+            android:text="Attention"
+            android:drawablePadding="@dimen/dp_5"
+            android:theme="@style/semibold_black_textview_theme"
+            />
+        <View
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="@dimen/dp_35"
+            android:background="@color/gray"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/guideline_vertical_right"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_truck_distance_crossed_horizondal_rule"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_40"
+            android:gravity="center"
+            android:id="@+id/status_item_truck_history_txtvw"
+            app:layout_constraintStart_toEndOf="@+id/guideline_vertical_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/dp_8"
+            app:layout_constraintTop_toBottomOf="@+id/status_item_truck_distance_crossed_horizondal_rule"
+            android:drawableStart="@drawable/ic_timer_repeat"
+            android:text="History"
+            android:drawablePadding="@dimen/dp_5"
+            android:theme="@style/semibold_black_textview_theme"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

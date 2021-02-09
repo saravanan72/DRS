@@ -1,18 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.screen.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.screen.activity.MainActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/white"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/main_side_menu_imgvw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="?actionBarSize"
+                    android:minHeight="?actionBarSize"
+                    android:src="@drawable/ic_baseline_menu_24"
+                    android:padding="@dimen/dp_5"
+                    />
+
+                <ImageView
+                    android:id="@+id/main_logo_imgvw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?actionBarSize"
+                    android:src="@drawable/app_logo"
+                    android:layout_toStartOf="@+id/main_search_menu_imgvw"
+                    android:layout_toEndOf="@+id/main_side_menu_imgvw"
+                    android:scaleType="centerInside"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/main_search_menu_imgvw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="?actionBarSize"
+                    android:minHeight="?actionBarSize"
+                    android:src="@drawable/ic_icons_search"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="centerInside"
+                    />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_content_layout"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/main_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:context=".view.screen.activity.MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_title_textview"
+            android:theme="@style/semibold_black_textview_theme"
+            android:text="TRUCK STATUS"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/dp_8"
+            android:paddingStart="@dimen/dp_4"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/sp_18"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/main_title_textview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rouded_rect_dark_blue"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10"
+                app:tabIndicatorHeight="1dp"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="#66FFFFFF"
+                app:tabIndicatorColor="#C1051E"
+                app:tabIndicatorFullWidth="false"
+                />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/no_internet_connection_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f7f7f7"
+        android:clickable="true"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
+                android:src="@drawable/nointernetconnection" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:text="@string/no_internet_connection_lay_first_txt"
+                android:textColor="@color/no_internet"
+                android:textSize="@dimen/dp_20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:gravity="center"
+                android:text="@string/no_internet_connection_lay_second_txt"
+                android:textColor="@color/no_internet"
+                android:textSize="@dimen/dp_10" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/no_internet_btn_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_40"
+                android:clickable="true"
+                android:text="@string/retry"
+                android:textColor="@color/no_internet_txt"
+                android:onClick="retryOnClick"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
